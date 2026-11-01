@@ -18,7 +18,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="Assets\*.png" CopyToOutputDirectory="PreserveNewest" />
+		<Content Include="Assets\*.png"
+                 CopyToOutputDirectory="PreserveNewest" />
+
+		<Content Include="..\..\resource\background\*.jpg"
+                 Link="Assets\background\%(Filename)%(Extension)"
+                 CopyToOutputDirectory="PreserveNewest" />
+
+		<Content Include="..\..\resource\bgm\*.wav"
+                 Link="Assets\bgm\%(Filename)%(Extension)"
+                 CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
 
 </Project>
