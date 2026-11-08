@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
 		<TargetFramework>net9.0-windows</TargetFramework>
@@ -18,16 +17,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="Assets\*.png"
-                 CopyToOutputDirectory="PreserveNewest" />
+		<Content Include="Assets\*.png" CopyToOutputDirectory="PreserveNewest" />
 
 		<Content Include="..\..\resource\background\*.jpg"
-                 Link="Assets\background\%(Filename)%(Extension)"
-                 CopyToOutputDirectory="PreserveNewest" />
-
+				 Link="Assets\background\%(Filename)%(Extension)"
+				 CopyToOutputDirectory="PreserveNewest" />
 		<Content Include="..\..\resource\bgm\*.wav"
-                 Link="Assets\bgm\%(Filename)%(Extension)"
-                 CopyToOutputDirectory="PreserveNewest" />
-	</ItemGroup>
+				 Link="Assets\bgm\%(Filename)%(Extension)"
+				 CopyToOutputDirectory="PreserveNewest" />
 
+		<Content Include="..\..\resource\character\main_character\with_spear\**\*.png"
+				 Link="Assets\Characters\WithSpear\%(RecursiveDir)%(Filename)%(Extension)"
+				 CopyToOutputDirectory="PreserveNewest" />
+
+		<Content Include="..\..\resource\character\main_character\without_spear_64\**\*.png"
+				 Link="Assets\Characters\WithoutSpear\%(RecursiveDir)%(Filename)%(Extension)"
+				 CopyToOutputDirectory="PreserveNewest" />
+
+		<Content Include="..\..\resource\character\mob\knight\**\*.png"
+				 Link="Assets\Characters\Knight\%(RecursiveDir)%(Filename)%(Extension)"
+				 CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
 </Project>
